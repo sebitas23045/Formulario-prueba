@@ -1,0 +1,33 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "extends": [
+    "airbnb"
+  ],
+  "plugins": [],
+  "rules": {
+    "no-shadow": "off",
+    "no-param-reassign": "off",
+    "eol-last": "off",
+    "linebreak-style": ["error", "unix"],
+    "indent": ["error", 2],
+    "no-trailing-spaces": "error",
+    "keyword-spacing": ["error", { "before": true, "after": true }],
+    "import/extensions": ["error", "always", { "js": "never" }]
+  },
+  "ignorePatterns": [
+    "dist/",
+    "build/"
+  ]
+}
