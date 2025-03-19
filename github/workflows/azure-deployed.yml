@@ -3,10 +3,10 @@ name: Build and Deploy to Azure Web App
 on:
   push:
     branches:
-      - develop  # O tu rama de despliegue
+      - develop 
   pull_request:
     branches:
-      - develop  # O tu rama de despliegue
+      - develop 
 
 jobs:
   build-and-deploy:
@@ -19,7 +19,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '22'  # O la versión que tu proyecto necesite
+        node-version: '22'  
 
     - name: Install dependencies
       run: npm install
@@ -30,6 +30,6 @@ jobs:
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v2
       with:
-        app-name: ${{ secrets.AZURE_WEBAPP_NAME }}  # Nombre de la aplicación en Azure
-        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}  # Perfil de publicación (asegurate de almacenarlo en Secrets)
-        package: .  # Directorio donde está el paquete a desplegar
+        app-name: ${{ secrets.AZURE_WEBAPP_NAME }}  
+        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}  
+        package: . 
